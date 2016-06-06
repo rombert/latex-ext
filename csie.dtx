@@ -4,14 +4,26 @@
 % - http://www.latex-community.org/know-how/latex/54-latex-document-classes/342-writing-a-latex-class-file-to-produce-a-form
 % - http://tutex.tug.org/pracjourn/2005-4/hefferon/hefferon.pdf
 
+%<*csiearticle>
 \ProvidesClass{csiearticle}[2016/06/03 v1.0 ASE CSIE style]
+%</csiearticle>
+
+%<*csiebook>
+\ProvidesClass{csiebook}[2016/06/03 v1.0 ASE CSIE style]
+%</csiebook>
+
 \NeedsTeXFormat{LaTeX2e}
 
 % Class structure: execution of options part
 \ProcessOptions \relax
 
-% Class structure: declaration of options part
+% Class structure: Based on article OR book
+%<*csiebook>
+\LoadClass[a4paper,12pt]{book}
+%</csiebook>
+%<*csiearticle>
 \LoadClass[a4paper,12pt]{article}
+%</csiearticle>
 
 % Page layout
 \RequirePackage[left=25mm,right=20mm,top=20mm,bottom=20mm]{geometry}
