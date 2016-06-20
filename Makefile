@@ -1,10 +1,10 @@
 all: csiearticle.cls csiebook.cls
 
-csiearticle.cls: csie.dtx
-	latex csie.dtx
+csiearticle.cls: csie.ins csie.dtx
+	latex csie.ins
 
-csiebook.cls: csie.dtx
-	latex csie.dtx
+csiebook.cls: csie.ins csie.dtx
+	latex csie.ins
 
 install: csiearticle.cls csiebook.cls all.bib
 	mkdir -p ~/texmf/tex/latex/base/
