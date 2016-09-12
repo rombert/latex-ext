@@ -40,3 +40,10 @@
 
 % Romanian
 \RequirePackage[romanian]{babel}
+
+% Code highlighting
+\usepackage{listings}
+\lstset{
+    breaklines=true,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
